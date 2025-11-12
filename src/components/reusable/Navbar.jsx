@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Destinations", href: "#" },
-    { name: "Packages", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Destinations", href: "/destinations" },
+    { name: "Packages", href: "/packages" },
+    { name: "Services", href: "/services" },
+    { name: "Contact Us", href: "contact" },
   ];
 
   return (
@@ -25,12 +26,12 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-8 text-black font-medium">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
+              <Link
+                to={link.href}
                 className="hover:text-[#ff9700] transition-colors duration-300"
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -58,12 +59,12 @@ const Navbar = () => {
           <ul className="flex flex-col items-center space-y-4 py-4 text-black font-medium">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className="hover:text-[#ff9700] transition-colors duration-300"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
             <Search className="w-5 h-5 cursor-pointer text-black" />

@@ -1,26 +1,31 @@
-import './App.css'
-import Navbar from './components/reusable/Navbar'
-import Hero from './components/Hero-Section/Hero.jsx'
-import Destination from './components/Destinations-Section/Destination.jsx'
-import Feature from './components/Featured-Section/Feature.jsx'
-import Choose from './components/Choose-Section/Choose.jsx'
-import Review from './components/Review-Section/Review.jsx'
-import Adventure from './components/Adventure-Section/Adventure.jsx'
-import Footer from './components/reusable/Footer.jsx'
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/reusable/Navbar';
+import Footer from './components/reusable/Footer';
+
+// Pages
+import Home from './pages/Home/Home.jsx';
+import About from './pages/About/About.jsx';
+// import Destinations from './pages/Destinations';
+// import Packages from './pages/Packages';
+// import Services from './pages/Services';
+// import Contact from './pages/Contact';
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Hero />
-      <Destination />
-      <Feature />
-      <Choose />
-      <Review />
-      <Adventure />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route path="/destinations" element={<Destinations />} /> */}
+        {/* <Route path="/packages" element={<Packages />} /> */}
+        {/* <Route path="/services" element={<Services />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
+      </Routes>
       <Footer />
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
