@@ -5,6 +5,8 @@ import Destination from './components/Destinations-Section/Destination.jsx'
 import Feature from './components/Featured-Section/Feature.jsx'
 import Choose from './components/Choose-Section/Choose.jsx'
 import Review from './components/Review-Section/Review.jsx'
+import Adventure from './components/Adventure-Section/Adventure.jsx'
+import Footer from './components/reusable/Footer.jsx'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Feature />
       <Choose />
       <Review />
+      <Adventure />
+      <Footer />
     </>
   )
 }
