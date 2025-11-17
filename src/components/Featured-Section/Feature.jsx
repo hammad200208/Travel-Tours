@@ -35,9 +35,6 @@ const Feature = () => {
         <h2 className="text-4xl font-bold font-poppins text-[#2C2C2C] mb-4">
           Featured Packages
         </h2>
-        <p className="text-[#2B2B2B] text-lg font-poppins">
-          Discover our top travel experiences handpicked for you.
-        </p>
       </div>
 
       {/* Feature Cards */}

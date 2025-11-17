@@ -7,7 +7,7 @@ import Footer from './components/reusable/Footer';
 import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
 import Destinations from './pages/Destination/Destination.jsx';
-// import Packages from './pages/Packages';
+import Packages from './pages/Packages/Packages.jsx';
 // import Services from './pages/Services';
 // import Contact from './pages/Contact';
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/destinations" element={<Destinations />} />
-        {/* <Route path="/packages" element={<Packages />} /> */}
+        <Route path="/packages" element={<Packages />} />
         {/* <Route path="/services" element={<Services />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
