@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="w-full bg-[#202020] py-4 flex justify-center shadow-lg">
         <div className="flex flex-col md:flex-row items-center gap-2 w-[90%] max-w-5xl justify-center">
           {/* LEFT BUTTONS */}
-          <div className="flex flex-wrap justify-center items-center gap-2">
+          <div className="flex flex-wrap justify-center items-center">
             <button className="px-4 py-2 bg-[#2B2B2B] text-white text-sm">Luxury</button>
             <button className="px-4 py-2 bg-[#F6B15C] text-[#2C2C2C] text-sm font-medium">Adventure</button>
             <button className="px-4 py-2 bg-[#2B2B2B] text-white text-sm">Family</button>

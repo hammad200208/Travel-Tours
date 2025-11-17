@@ -6,7 +6,7 @@ const features = [
     img: "/nepal.jpg",
     city: "Nepal",
     paragraph: "Conquer the Himalayas",
-    description: "3 days / 2 nights",
+    description: "9 days",
     price: "AED 499",
     rating: 4.5,
   },
@@ -14,7 +14,7 @@ const features = [
     img: "/costarica.jpg",
     city: "Costa Rica",
     paragraph: "Wild Rainforests & Volcano Thrills",
-    description: "5 days / 4 nights",
+    description: "6 days",
     price: "AED 1999",
     rating: 5,
   },
@@ -22,7 +22,7 @@ const features = [
     img: "/dubai4.jpg",
     city: "Dubai",
     paragraph: "Desert & Thrill Adventure",
-    description: "4 days / 3 nights",
+    description: "8 days",
     price: "AED 1299",
     rating: 5,
   },
@@ -30,7 +30,7 @@ const features = [
     img: "/bali4.jpg",
     city: "Bali",
     paragraph: "Tropical Adventure Awaits",
-    description: "5 days / 4 nights",
+    description: "7 days",
     price: "AED 1799",
     rating: 5,
   },
@@ -51,29 +51,29 @@ const TopPackages = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+            className="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer group flex flex-col"
           >
             <img
               src={feature.img}
               alt={feature.city}
               className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="p-4">
+            <div className="p-4 flex flex-col flex-1">
               <h3 className="text-xl text-[#2B2B2B] font-bold font-poppins mb-1">
                 {feature.city}
               </h3>
-              <h3 className="text-lg text-[#777777] font-medium font-poppins mb-2 truncate">
+              <h3 className="text-lg text-[#777777] font-medium font-poppins mb-2 truncate overflow-hidden whitespace-nowrap text-ellipsis">
                 {feature.paragraph}
               </h3>
 
               {/* Description and Price */}
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between w-full mb-2 px-2">
                 <p className="text-[#777777] font-poppins">{feature.description}</p>
                 <p className="text-[#F49C0B] font-semibold">{feature.price}</p>
               </div>
 
               {/* Rating Stars */}
-              <div className="flex items-center gap-1">
+              <div className="flex items-start gap-1 mb-4">
                 {Array.from({ length: 5 }).map((_, i) => {
                   if (i < Math.floor(feature.rating)) {
                     return <FaStar key={i} className="text-[#F6B15C]" />;
@@ -83,6 +83,13 @@ const TopPackages = () => {
                     return <FaRegStar key={i} className="text-gray-300" />;
                   }
                 })}
+              </div>
+
+              {/* View Details Button */}
+              <div className="flex justify-center mt-auto">
+                <button className="bg-[#F49C0B] text-white px-6 py-2 rounded-2xl font-medium hover:scale-105 transition-transform duration-300">
+                  View Details
+                </button>
               </div>
             </div>
           </div>
