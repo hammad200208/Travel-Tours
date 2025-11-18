@@ -9,7 +9,7 @@ import About from './pages/About/About.jsx';
 import Destinations from './pages/Destination/Destination.jsx';
 import Packages from './pages/Packages/Packages.jsx';
 import Services from './pages/Services/Services.jsx';
-// import Contact from './pages/Contact';
+import Contact from './pages/Contact/Contact.jsx';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/services" element={<Services />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
