@@ -39,9 +39,11 @@ const Navbar = () => {
         {/* Right: Search Icon + Book Now */}
         <div className="hidden md:flex items-center space-x-8">
           <Search className="w-5 h-5 cursor-pointer text-[#5C6B73]" />
+          <Link to="/booking">
           <button className="bg-[#ff9700] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#e28700] transition-all">
             Book Now
           </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -68,9 +70,11 @@ const Navbar = () => {
               </li>
             ))}
             <Search className="w-5 h-5 cursor-pointer text-black" />
+            <Link to="/booking">
             <button className="bg-[#ff9700] text-white px-5 py-2 rounded-full font-medium hover:bg-[#e28700] transition-all">
               Book Now
             </button>
+            </Link>
           </ul>
         </div>
       )}
