@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   {
@@ -28,6 +29,8 @@ const features = [
 ];
 
 const Feature = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
       {/* Section Heading */}
@@ -42,22 +45,35 @@ const Feature = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+            className="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer group flex flex-col"
           >
             <img
               src={feature.img}
               alt={feature.city}
               className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="p-4">
+
+            <div className="p-4 flex-1">
               <h3 className="text-xl text-[#2C2C2C] font-bold font-poppins mb-1">
                 {feature.city}
               </h3>
-              <p className="text-gray-500 font-poppins mb-2">{feature.description}</p>
-              <p className="text-gray-700 font-poppins">
+              <p className="text-gray-500 font-poppins mb-2">
+                {feature.description}
+              </p>
+              <p className="text-gray-700 font-poppins mb-4">
                 Starting from{" "}
                 <span className="text-[#F49C0B] font-semibold">{feature.price}</span>
               </p>
+            </div>
+
+            {/* BOOK NOW Button */}
+            <div className="pb-4 flex justify-center">
+              <button
+                onClick={index === 0 ? () => navigate("/destination-explore") : undefined}
+                className="bg-[#F49C0B] text-white px-5 py-2 rounded-lg font-poppins hover:bg-[#d88509] transition"
+              >
+                Book Now
+              </button>
             </div>
           </div>
         ))}
