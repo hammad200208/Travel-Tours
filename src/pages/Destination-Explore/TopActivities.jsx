@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const activities = [
   {
@@ -34,6 +35,8 @@ const activities = [
 ];
 
 const TopActivities = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-12 px-4 md:px-8 lg:px-16 bg-[#FFF8F3]">
       <h2 className="text-center text-3xl font-bold font-poppins text-[#000000] mb-10">
@@ -59,11 +62,21 @@ const TopActivities = () => {
               <h3 className="text-lg font-semibold font-poppins text-[#2B2B2B]">
                 {item.title}
               </h3>
-              <p className="text-[#777777] font-poppins text-sm mt-1">{item.desc}</p>
+              <p className="text-[#777777] font-poppins text-sm mt-1">
+                {item.desc}
+              </p>
+
               <div className="mt-4 flex justify-center">
-              <button className="mt-4 bg-[#f49b0bf6] text-white text-sm font-medium px-5 py-2 rounded-lg hover:bg-[#f49b0bf1] transition">
-                View Details
-              </button>
+                <button
+                  className="mt-4 bg-[#f49b0bf6] text-white text-sm font-medium px-5 py-2 rounded-lg hover:bg-[#f49b0bf1] transition"
+                  onClick={() => {
+                    if (index === 0) {
+                      navigate("/desert-safari");
+                    }
+                  }}
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
