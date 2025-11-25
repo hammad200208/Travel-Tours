@@ -73,6 +73,9 @@ const TopActivities = () => {
                     if (index === 0) {
                       navigate("/desert-safari");
                     }
+                    if (index ===5) {
+                      navigate("/cruise");
+                    }
                   }}
                 >
                   View Details

@@ -15,12 +15,14 @@ import Evening from './pages/evening-desert-safari/Evening.jsx';
 import Night from './pages/night-desert-safari/Night.jsx';
 import BookingForm from './pages/night-desert-safari/BookingForm.jsx';
 import BookingConfirm from './pages/night-desert-safari/BookingConfirm.jsx';
+import Cruise from './pages/Cruise/Cruise.jsx'
 import Packages from './pages/Packages/Packages.jsx';
 import Services from './pages/Services/Services.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import BookNow from './pages/Booking/Booking.jsx';
 import Confrim from './pages/Booking/Confirm.jsx';
 import { Tickets } from 'lucide-react';
+
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
         <Route path="/night-desert-safari" element={<Night />} />
         <Route path="/booking-form" element={<BookingForm />} />
         <Route path="/booking-confirm" element={<BookingConfirm />} />
+        <Route path="/cruise" element={<Cruise />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
