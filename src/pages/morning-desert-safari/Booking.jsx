@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const BookNow = () => {
   return (
@@ -15,10 +16,11 @@ const BookNow = () => {
       </p>
 
       {/* Button */}
+      <Link to="/booking-form">
       <button className="bg-white text-[#2B2B2B] font-semibold px-8 py-3 rounded-2xl hover:bg-gray-200 transition duration-300">
         Book Morning Safari
       </button>
-      
+      </Link>
     </section>
     </>
   )
