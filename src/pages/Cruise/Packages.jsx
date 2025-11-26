@@ -1,5 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const packages = [
   {
@@ -31,6 +32,8 @@ const packages = [
 ];
 
 export default function Packages() {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-[#FFF6EC] py-16 px-6 font-poppins">
       <h2 className="text-3xl font-bold text-center mb-10 text-[#000000]">
@@ -61,7 +64,16 @@ export default function Packages() {
               ))}
             </ul>
 
-            <button className="mt-6 bg-[#F49C0B] text-[#FFFFFF] hover:bg-[#d88509] cursor-pointer font-medium px-5 py-2 rounded-lg w-full">
+            <button
+              onClick={() =>
+                index === 0
+                  ? navigate("/standard-cruise")
+                  : index === 1
+                  ? navigate("/premium-cruise")
+                  : navigate("/private-cruise")
+              }
+              className="mt-6 bg-[#F49C0B] text-[#FFFFFF] hover:bg-[#d88509] cursor-pointer font-medium px-5 py-2 rounded-lg w-full"
+            >
               Book Now
             </button>
           </div>

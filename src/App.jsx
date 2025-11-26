@@ -16,6 +16,7 @@ import Night from './pages/night-desert-safari/Night.jsx';
 import BookingForm from './pages/night-desert-safari/BookingForm.jsx';
 import BookingConfirm from './pages/night-desert-safari/BookingConfirm.jsx';
 import Cruise from './pages/Cruise/Cruise.jsx'
+import Standard from './pages/standard-cruise/Standard.jsx';
 import Packages from './pages/Packages/Packages.jsx';
 import Services from './pages/Services/Services.jsx';
 import Contact from './pages/Contact/Contact.jsx';
@@ -41,6 +42,7 @@ function App() {
         <Route path="/booking-form" element={<BookingForm />} />
         <Route path="/booking-confirm" element={<BookingConfirm />} />
         <Route path="/cruise" element={<Cruise />} />
+        <Route path="/standard-cruise" element={<Standard />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
