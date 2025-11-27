@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 const features = [
@@ -37,16 +38,16 @@ const features = [
 ];
 
 const TopPackages = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
-      {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold font-poppins text-[#2C2C2C] mb-4">
           Featured Packages
         </h2>
       </div>
 
-      {/* Feature Cards */}
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
         {features.map((feature, index) => (
           <div
@@ -66,13 +67,11 @@ const TopPackages = () => {
                 {feature.paragraph}
               </h3>
 
-              {/* Description and Price */}
               <div className="flex items-center justify-between w-full mb-2 px-2">
                 <p className="text-[#777777] font-poppins">{feature.description}</p>
                 <p className="text-[#F49C0B] font-semibold">{feature.price}</p>
               </div>
 
-              {/* Rating Stars */}
               <div className="flex items-start gap-1 mb-4">
                 {Array.from({ length: 5 }).map((_, i) => {
                   if (i < Math.floor(feature.rating)) {
@@ -87,10 +86,18 @@ const TopPackages = () => {
 
               {/* View Details Button */}
               <div className="flex justify-center mt-auto">
-                <button className="bg-[#F49C0B] text-white px-6 py-2 rounded-2xl font-medium hover:scale-105 transition-transform duration-300">
+                <button
+                  onClick={() => {
+                    if (index === 2) {
+                      navigate("/packages-detail");
+                    }
+                  }}
+                  className="bg-[#F49C0B] text-white px-6 py-2 rounded-2xl font-medium hover:scale-105 transition-transform duration-300"
+                >
                   View Details
                 </button>
               </div>
+
             </div>
           </div>
         ))}

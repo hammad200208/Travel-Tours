@@ -20,6 +20,7 @@ import Standard from './pages/standard-cruise/Standard.jsx';
 import Premium from './pages/premium-cruise/Premium.jsx';
 import Private from './pages/private-cruise/Private.jsx';
 import Packages from './pages/Packages/Packages.jsx';
+import PackagesDetail from './pages/packages-detail/PackagesDetail.jsx';
 import Services from './pages/Services/Services.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import BookNow from './pages/Booking/Booking.jsx';
@@ -48,6 +49,7 @@ function App() {
         <Route path="/premium-cruise" element={<Premium />} />
         <Route path="/private-cruise" element={<Private />} />
         <Route path="/packages" element={<Packages />} />
+        <Route path="/packages-detail" element={<PackagesDetail />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booking" element={<BookNow />} />
