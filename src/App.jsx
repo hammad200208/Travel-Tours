@@ -22,6 +22,7 @@ import Private from './pages/private-cruise/Private.jsx';
 import Packages from './pages/Packages/Packages.jsx';
 import PackagesDetail from './pages/packages-detail/PackagesDetail.jsx';
 import Services from './pages/Services/Services.jsx';
+import DubaiTransfer from './pages/dubai-transfers/DubaiTransfer.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import BookNow from './pages/Booking/Booking.jsx';
 import Confrim from './pages/Booking/Confirm.jsx';
@@ -51,6 +52,7 @@ function App() {
         <Route path="/packages" element={<Packages />} />
         <Route path="/packages-detail" element={<PackagesDetail />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/dubai-transfers" element={<DubaiTransfer />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booking" element={<BookNow />} />
         <Route path="/confirm" element={<Confrim />} />
