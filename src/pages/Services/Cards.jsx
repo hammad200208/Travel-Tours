@@ -62,7 +62,10 @@ const Cards = () => {
             card={card}
             onClick={() => {
               if (index === 0) {
-                navigate("/dubai-transfers"); // ⭐ First card navigation
+                navigate("/dubai-transfers"); //  First card navigation
+              }
+              if (index === 2) {
+                navigate("/visa"); //  third card navigation
               }
             }}
           />
