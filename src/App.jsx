@@ -24,6 +24,10 @@ import PackagesDetail from './pages/packages-detail/PackagesDetail.jsx';
 import Services from './pages/Services/Services.jsx';
 import DubaiTransfer from './pages/dubai-transfers/DubaiTransfer.jsx';
 import Visa from './pages/Visa/Visa.jsx';
+import Form from './pages/visa-form/Form.jsx';
+import Form2 from './pages/visa-form2/Form2.jsx';
+import Form3 from './pages/visa-form3/Form3.jsx';
+import Tourist from './pages/tourist-visa/Tourist.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import BookNow from './pages/Booking/Booking.jsx';
 import Confrim from './pages/Booking/Confirm.jsx';
@@ -55,6 +59,10 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/dubai-transfers" element={<DubaiTransfer />} />
         <Route path="/visa" element={<Visa />} />
+        <Route path="/tourist-visa" element={<Tourist />} />
+        <Route path="/visa-form" element={<Form />} />
+        <Route path="/visa-form2" element={<Form2 />} />
+        <Route path="/visa-form3" element={<Form3 />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booking" element={<BookNow />} />
         <Route path="/confirm" element={<Confrim />} />
