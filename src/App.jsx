@@ -27,6 +27,7 @@ import Visa from './pages/Visa/Visa.jsx';
 import Form from './pages/visa-form/Form.jsx';
 import Form2 from './pages/visa-form2/Form2.jsx';
 import Form3 from './pages/visa-form3/Form3.jsx';
+import LongVisa from './pages/long-stay-visa/LongVisa.jsx';
 import Tourist from './pages/tourist-visa/Tourist.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import BookNow from './pages/Booking/Booking.jsx';
@@ -63,6 +64,7 @@ function App() {
         <Route path="/visa-form" element={<Form />} />
         <Route path="/visa-form2" element={<Form2 />} />
         <Route path="/visa-form3" element={<Form3 />} />
+        <Route path="/long-stay-visa" element={<LongVisa />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booking" element={<BookNow />} />
         <Route path="/confirm" element={<Confrim />} />
