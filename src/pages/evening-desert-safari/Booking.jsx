@@ -11,7 +11,7 @@ const BookNow = () => {
       </h2>
 
       {/* Paragraph */}
-      <p className="text-white text-lg max-w-xl mb-8">
+      <p className="text-white text-lg max-w-2xl mb-8">
         From thrilling rides to fire-lit nights — the desert awaits your evening adventure.
       </p>
 

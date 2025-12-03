@@ -25,7 +25,7 @@ const ChooseUs = () => {
 
   return (
     <section className="w-full bg-[#FAFAFA] py-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-12">
           Why Choose Tripsiy?

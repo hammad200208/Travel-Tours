@@ -15,7 +15,8 @@ const offers = [
 
 const FeatureOffer = () => {
   return (
-    <section className="bg-[#FFF8F0] py-16 px-4 max-w-7xl mx-auto">
+    <section className="bg-[#FFF8F0] py-16">
+      <div className="max-w-7xl mx-auto px-4">
       {/* Section Heading */}
       <h2 className="text-4xl font-bold text-center text-black mb-12">
         Featured Offers
@@ -48,6 +49,7 @@ const FeatureOffer = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

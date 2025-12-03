@@ -22,12 +22,12 @@ const Trip = () => {
           <input
             type="email"
             placeholder="Email"
-            className="w-full border text-[#2B2B2B7D] border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
+            className="w-full border  border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
           />
           <input
             type="text"
             placeholder="Phone Number"
-            className="w-full border text-[#2B2B2B7D] border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
+            className="w-full border  border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
           />
         </div>
 
@@ -35,12 +35,12 @@ const Trip = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <input
             type="date"
-            className="w-full border text-[#2B2B2B7D] border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
+            className="w-full border text-[#969696]  border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
           />
           <input
             type="number"
             placeholder="Number of Travelers"
-            className="w-full border text-[#2B2B2B7D] border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
+            className="w-full border  border-[#00000030] rounded-lg px-4 py-3 focus:outline-none"
           />
         </div>
 

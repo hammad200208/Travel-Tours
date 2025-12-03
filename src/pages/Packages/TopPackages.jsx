@@ -44,7 +44,7 @@ const TopPackages = () => {
     <section className="py-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold font-poppins text-[#2C2C2C] mb-4">
-          Featured Packages
+          Top Packages
         </h2>
       </div>
 
@@ -69,7 +69,7 @@ const TopPackages = () => {
 
               <div className="flex items-center justify-between w-full mb-2 px-2">
                 <p className="text-[#777777] font-poppins">{feature.description}</p>
-                <p className="text-[#F49C0B] font-semibold">{feature.price}</p>
+                <p className="text-[#E8B958] font-semibold">{feature.price}</p>
               </div>
 
               <div className="flex items-start gap-1 mb-4">

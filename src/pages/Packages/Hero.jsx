@@ -34,7 +34,7 @@ const Hero = () => {
           </div>
 
           {/* RIGHT BUTTONS */}
-          <div className="flex flex-wrap justify-center items-center gap-1 md:pl-0.5 mt-2 md:mt-0">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:pl-4 mt-2 md:mt-0">
             <button className="px-4 py-2 bg-[#2B2B2B] text-white rounded-lg text-sm flex items-center gap-1">
               Region <FiChevronDown className="text-[#F6B15C]" />
             </button>

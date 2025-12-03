@@ -36,7 +36,7 @@ const Choose = () => {
         </h2>
 
         {/* Images + Text */}
-        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-10">
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-40">
           
           {/* IMAGES GRID */}
           <div className="grid grid-cols-2 gap-4 w-full max-w-lg">
@@ -85,20 +85,24 @@ const Choose = () => {
       </section>
 
       {/* QUICK INFO — OUTSIDE MAIN BG */}
-      <div className="bg-[#FEFEFF] py-10 px-6 md:px-20 font-poppins">
-        <h3 className="text-center text-2xl font-bold text-[#2C2C2C]">
-          Quick Info
-        </h3>
+<div className="bg-[#FEFEFF] py-10 px-6 md:px-20 font-poppins">
+  <h3 className="text-center text-2xl font-bold text-[#2C2C2C]">
+    Quick Info
+  </h3>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8">
-          {quickInfo.map((item, i) => (
-            <div key={i} className="flex flex-col items-center text-center">
-              <img src={item.icon} alt="" className="w-10 h-10 mb-2" />
-              <p className="text-[#4A4A4A] text-sm md:text-base">{item.title}</p>
-            </div>
-          ))}
-        </div>
+  <div className="grid grid-cols-2 sm:grid-cols-4 mt-8">
+    {quickInfo.map((item, i) => (
+      <div
+        key={i}
+        className="flex flex-row items-center justify-center gap-2 text-center sm:text-left"
+      >
+        <img src={item.icon} alt="" className="w-10 h-10" />
+        <p className="text-[#4A4A4A] text-sm md:text-base">{item.title}</p>
       </div>
+    ))}
+  </div>
+</div>
+
     </>
   );
 };

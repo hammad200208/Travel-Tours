@@ -21,7 +21,7 @@ const Explore = () => {
           Explore by Category
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 justify-items-center max-w-5xl mx-auto">
           {categories.map((cat, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               <div

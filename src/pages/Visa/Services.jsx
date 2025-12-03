@@ -32,18 +32,29 @@ const Service = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white p-8 rounded-2xl shadow-md flex flex-col items-center text-center w-full max-w-[340px]"
-          >
-            <img src={service.img} alt={service.title} className="w-20 h-20 mb-6 object-contain" />
-            <h3 className="text-xl font-semibold text-[#2B2B2B] mb-2">{service.title}</h3>
-            <p className=" text-[#4A4A4A]">{service.desc}</p>
-          </div>
-        ))}
-      </div>
+      {/* Cards */}
+<div className="flex flex-wrap justify-center gap-8">
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center
+                 w-full max-w-[260px]"   // smaller cards
+    >
+      <img
+        src={service.img}
+        alt={service.title}
+        className="w-16 h-16 mb-4 object-contain"
+      />
+      <h3 className="text-lg font-semibold text-[#2B2B2B] mb-1">
+        {service.title}
+      </h3>
+      <p className="text-sm text-[#4A4A4A]">
+        {service.desc}
+      </p>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 };

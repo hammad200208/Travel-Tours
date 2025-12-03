@@ -8,7 +8,7 @@ const Details = () => {
 
         {/* LEFT CARD */}
         <div className="bg-white rounded-xl shadow p-8">
-          <div className="space-y-3 text-sm">
+          <div className=" text-sm">
             <div className="flex justify-between">
               <span className="font-bold text-[#2B2B2B]">Duration</span>
               <span className="">30 Days (extendable)</span>

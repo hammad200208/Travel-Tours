@@ -9,7 +9,7 @@ const Adventure = () => {
       <p className="text-white text-base sm:text-lg md:text-xl mb-8 max-w-xl">
         Plan your dream trip with expert guidance and unbeatable deals.
       </p>
-      <button className="bg-white text-black font-semibold px-6 py-3 rounded transition-transform duration-300 hover:scale-105">
+      <button className="bg-white text-black font-semibold px-6 py-3 rounded-xl transition-transform duration-300 hover:scale-105">
         Start Planning Now
       </button>
     </section>

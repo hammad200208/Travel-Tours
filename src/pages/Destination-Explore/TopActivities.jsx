@@ -44,7 +44,7 @@ const TopActivities = () => {
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {activities.map((item, index) => (
           <div
             key={index}
@@ -62,7 +62,7 @@ const TopActivities = () => {
               <h3 className="text-lg font-semibold font-poppins text-[#2B2B2B]">
                 {item.title}
               </h3>
-              <p className="text-[#777777] font-poppins text-sm mt-1">
+              <p className="text-[#777777] font-poppins text-sm mt-1 max-w-sm">
                 {item.desc}
               </p>
 

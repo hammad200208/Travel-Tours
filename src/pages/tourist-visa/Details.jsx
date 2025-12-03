@@ -7,10 +7,10 @@ const Details = () => {
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10">
 
         {/* LEFT CARD */}
-        <div className="bg-white rounded-xl shadow p-8">
-          <h2 className="text-xl text-[#2B2B2B] font-semibold mb-4">Visa Details</h2>
+        <div className="bg-white rounded-xl shadow p-4">
+          <h2 className="text-xl text-[#2B2B2B] font-semibold text-center">Visa Details</h2>
 
-          <div className="space-y-3 text-sm">
+          <div className="text-sm">
             <div className="flex justify-between">
               <span className="font-bold text-[#2B2B2B]">Duration</span>
               <span className="">30 Days</span>
@@ -44,7 +44,7 @@ const Details = () => {
         </div>
 
         {/* RIGHT SIDE REQUIREMENTS */}
-        <div className="space-y-4 md:space-y-15 text-[#4A4A4A] text-sm">
+        <div className="space-y-4 md:space-y-8 text-[#4A4A4A] text-sm">
           {[
             "Passport copy (valid for 6 months)",
             "Passport-size photograph (white background)",

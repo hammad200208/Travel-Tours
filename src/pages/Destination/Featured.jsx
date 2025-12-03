@@ -14,15 +14,15 @@ const Featured = () => {
           Featured Destinations
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-5xl mx-auto">
           {destinations.map((dest, index) => (
             <div key={index} className="relative group overflow-hidden rounded-lg">
               <img
                 src={dest.img}
                 alt={dest.name}
-                className="w-full h-115 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-100 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute bottom-0 w-full bg-linear-to-t from-black/60 to-transparent text-white text-center py-2">
+              <div className="absolute font-semibold text-lg bottom-0 w-full bg-linear-to-t from-black/60 to-transparent text-white text-center py-2">
                 {dest.name}
               </div>
             </div>

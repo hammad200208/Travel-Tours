@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section
-      className="relative h-[90vh] bg-cover bg-center flex flex-col justify-center items-center text-center"
+      className="relative h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
       style={{ backgroundImage: "url('/destination.jpg')" }}
     >
       {/* Overlay */}

@@ -13,39 +13,39 @@ const Cards = () => {
     <>
       {/* Image Section */}
       <section className="bg-[#FFFCF8] py-12 px-6 md:px-12 lg:px-20">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
 
           {/* Image 1 → spans 2 rows */}
           <img
             src={images[0]}
             alt="card-1"
-            className="rounded-xl object-cover w-full h-[530px] sm:row-span-2"
+            className="rounded-xl object-cover w-full h-[360px] sm:row-span-2"
           />
 
           {/* Image 2 */}
           <img
             src={images[1]}
             alt="card-2"
-            className="rounded-xl object-cover h-64 w-full"
+            className="rounded-xl object-cover h-42 w-full"
           />
 
           {/* Image 3 */}
           <img
             src={images[2]}
             alt="card-3"
-            className="rounded-xl object-cover h-64 w-full"
+            className="rounded-xl object-cover h-42 w-full"
           />
 
           {/* Row 2 */}
           <img
             src={images[3]}
             alt="card-4"
-            className="rounded-xl object-cover h-64 w-full sm:col-start-2"
+            className="rounded-xl object-cover h-42 w-full sm:col-start-2"
           />
           <img
             src={images[4]}
             alt="card-5"
-            className="rounded-xl object-cover h-64 w-full"
+            className="rounded-xl object-cover h-42 w-full"
           />
         </div>
       </section>

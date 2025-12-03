@@ -37,7 +37,7 @@ export default function TicketOption() {
         Ticket Options
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {tickets.map((item, index) => (
           <div
             key={index}
