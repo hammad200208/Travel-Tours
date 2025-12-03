@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Form3 = ({ onNext, onSave }) => {
   const [passportCopy, setPassportCopy] = useState(null);
@@ -6,9 +7,9 @@ const Form3 = ({ onNext, onSave }) => {
   const [returnTicket, setReturnTicket] = useState(null);
   const [hotelBooking, setHotelBooking] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const navigate = useNavigate();
 
+  const handleSubmit = () => {
     const formData = {
       passportCopy,
       passportPhoto,
@@ -18,15 +19,19 @@ const Form3 = ({ onNext, onSave }) => {
 
     if (onSave) onSave(formData);
     if (onNext) onNext();
+
+    // Redirect to Step 4
+    navigate("/visa-form4");
   };
 
   return (
-    <div className="w-full max-w-xl bg-white my-30 py-4 px-4 rounded-xl shadow-md mx-auto text-center">
+    <section className="bg-[#fafafa] pt-30 pb-10">
+    <div className="w-full max-w-xl bg-white py-4 px-4 rounded-xl shadow-md mx-auto text-center">
 
       <h2 className="text-xl font-semibold mb-1">Visa Application Form</h2>
       <p className="text-sm text-gray-500 mb-6">Step 3 – Upload Documents</p>
 
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
+      <form className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
 
         {/* Passport Copy */}
         <div className="flex flex-col text-left">
@@ -74,13 +79,15 @@ const Form3 = ({ onNext, onSave }) => {
 
       </form>
 
+      {/* Save & Next Button */}
       <button
         onClick={handleSubmit}
-        className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded-lg text-sm font-medium transition"
+        className="bg-[#F49C0B] hover:bg-[#F49C0B] text-white px-6 py-3 rounded-lg text-sm font-medium transition"
       >
         Save & Next
       </button>
     </div>
+    </section>
   );
 };
 
