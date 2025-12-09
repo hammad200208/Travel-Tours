@@ -4,7 +4,7 @@ const destinations = [
   {
     city: "Dubai",
     description: "Unite Arab Emirates",
-    img: "/things.jfif",
+    img: "/dubai1.jpg",
   },
   {
     city: "Abu Dhabi",
@@ -47,7 +47,7 @@ const Destination = () => {
       </div>
 
       {/* Destination Cards */}
-      <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+      <div className="grid gap-8 md:grid-cols-3">
         {destinations.map((dest) => (
           <div
             key={dest.city}
