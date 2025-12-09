@@ -3,14 +3,14 @@ import React from "react";
 const Hero = () => {
   return (
     <section
-      className="w-full h-screen bg-cover bg-center relative"
+      className="w-full h-[81vh] bg-cover bg-center relative"
       style={{ backgroundImage: "url('/bg.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-10">
         <h1 className="text-white font-extrabold text-4xl md:text-6xl font-poppins mb-4">
           Discover the World with Tripsiy
         </h1>

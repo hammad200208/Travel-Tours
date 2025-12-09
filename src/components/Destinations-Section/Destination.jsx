@@ -2,35 +2,35 @@ import React from "react";
 
 const destinations = [
   {
-    city: "Bali",
-    description: "Tropical Bliss Awaits",
-    img: "/bali.jpg",
-  },
-  {
-    city: "Cappadocia",
-    description: "Elegance Above the Clouds",
-    img: "/cappadocia.jpg",
-  },
-  {
-    city: "Paris",
-    description: "The Art of Love and Luxury",
-    img: "/paris.jpg",
-  },
-  {
     city: "Dubai",
-    description: "Desert Gold and City Lights",
-    img: "/dubai.jpg",
+    description: "Unite Arab Emirates",
+    img: "/things.jfif",
   },
   {
-    city: "Maldives",
-    description: "Paradise in Every Wave",
-    img: "/maldives.jpg",
+    city: "Abu Dhabi",
+    description: "Uinted Arab Emirates",
+    img: "/things2.jpg",
   },
   {
-    city: "Kyoto",
-    description: "Tradition Draped in Tranquility",
-    img: "/kyoto.jpg",
+    city: "Al Khaima",
+    description: "United Arab Emirates",
+    img: "/things3.webp",
   },
+  // {
+  //   city: "Dubai",
+  //   description: "Desert Gold and City Lights",
+  //   img: "/dubai.jpg",
+  // },
+  // {
+  //   city: "Maldives",
+  //   description: "Paradise in Every Wave",
+  //   img: "/maldives.jpg",
+  // },
+  // {
+  //   city: "Kyoto",
+  //   description: "Tradition Draped in Tranquility",
+  //   img: "/kyoto.jpg",
+  // },
 ];
 
 const Destination = () => {
@@ -47,7 +47,7 @@ const Destination = () => {
       </div>
 
       {/* Destination Cards */}
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
         {destinations.map((dest) => (
           <div
             key={dest.city}
