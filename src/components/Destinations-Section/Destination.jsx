@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const destinations = [
   {
@@ -16,24 +17,11 @@ const destinations = [
     description: "United Arab Emirates",
     img: "/things3.webp",
   },
-  // {
-  //   city: "Dubai",
-  //   description: "Desert Gold and City Lights",
-  //   img: "/dubai.jpg",
-  // },
-  // {
-  //   city: "Maldives",
-  //   description: "Paradise in Every Wave",
-  //   img: "/maldives.jpg",
-  // },
-  // {
-  //   city: "Kyoto",
-  //   description: "Tradition Draped in Tranquility",
-  //   img: "/kyoto.jpg",
-  // },
 ];
 
 const Destination = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
       {/* Section Heading */}
@@ -48,7 +36,7 @@ const Destination = () => {
 
       {/* Destination Cards */}
       <div className="grid gap-8 md:grid-cols-3">
-        {destinations.map((dest) => (
+        {destinations.map((dest, index) => (
           <div
             key={dest.city}
             className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer"
@@ -58,18 +46,30 @@ const Destination = () => {
               alt={dest.city}
               className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
             />
+
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             {/* Info */}
             <div className="absolute left-4 bottom-16 text-white">
-              <h3 className="text-2xl font-bold font-poppins">{dest.city}</h3>
-              <p className="text-sm font-poppins">{dest.description}</p>
+              <h3 className="text-2xl font-bold font-poppins">
+                {dest.city}
+              </h3>
+              <p className="text-sm font-poppins">
+                {dest.description}
+              </p>
             </div>
 
             {/* Button */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-              <button className="bg-[#ff9700] px-6 py-2 rounded-2xl text-white font-semibold hover:opacity-90 transition">
+              <button
+                onClick={() => {
+                  if (index === 0) {
+                    navigate("/dubai-packages");
+                  }
+                }}
+                className="bg-[#ff9700] px-6 py-2 rounded-2xl text-white font-semibold hover:opacity-90 transition"
+              >
                 View Packages
               </button>
             </div>
