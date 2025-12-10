@@ -8,6 +8,7 @@ import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
 import Destinations from './pages/Destination/Destination.jsx';
 import DubaiPackages from './pages/dubai-packages/DubaiPackages.jsx';
+import DubaiCityTour from './pages/dubai-packages-book-now/DubaiCityTour.jsx';
 import DestinationExplore from './pages/Destination-Explore/DestinationExplore.jsx'
 import Safari from './pages/Desert-Safari/Safari.jsx';
 import SafariTickets from './pages/Safari-Tickets/SafariTickets.jsx';
@@ -48,6 +49,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/dubai-packages" element={<DubaiPackages />} />
+        <Route path="/dubai-packages-book-now" element={<DubaiCityTour />} />
         <Route path="/destination-explore" element={<DestinationExplore />} />
         <Route path="/desert-safari" element={<Safari />} />
         <Route path="/safari-tickets" element={<SafariTickets />} />
