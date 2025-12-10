@@ -153,8 +153,8 @@ const DubaiCityTour = () => {
 
       {/* BOOKING FORM MODAL */}
 
-    {openForm && (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
+  {openForm && (
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
     <div className="bg-white w-full max-w-lg rounded-xl p-6 relative max-h-[90vh] overflow-y-auto">
 
       {/* Close Button */}
@@ -169,10 +169,33 @@ const DubaiCityTour = () => {
         Book Dubai City Tour
       </h2>
 
-      <form className="space-y-4">
+      {/* Form with onSubmit handler */}
+      <form
+        className="space-y-4"
+        onSubmit={(e) => {
+          e.preventDefault(); // Prevent page reload
+          
+          // Collect form data
+          const formData = new FormData(e.target);
+          const bookingData = {
+            fullName: formData.get("fullName"),
+            phoneNumber: formData.get("phoneNumber"),
+            whatsappNumber: formData.get("whatsappNumber"),
+            date: formData.get("date"),
+            persons: formData.get("persons"),
+            pickupLocation: formData.get("pickupLocation"),
+            extraRequirements: formData.get("extraRequirements"),
+          };
 
+          console.log("Booking Data:", bookingData); // Replace with API call or localStorage logic
+          alert("Booking submitted successfully!");
+
+          setOpenForm(false); // Close modal
+        }}
+      >
         <input
           type="text"
+          name="fullName"
           placeholder="Full Name"
           className="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#F49C0B]"
           required
@@ -180,6 +203,7 @@ const DubaiCityTour = () => {
 
         <input
           type="tel"
+          name="phoneNumber"
           placeholder="Phone Number"
           className="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#F49C0B]"
           required
@@ -187,6 +211,7 @@ const DubaiCityTour = () => {
 
         <input
           type="tel"
+          name="whatsappNumber"
           placeholder="WhatsApp Number"
           className="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#F49C0B]"
           required
@@ -194,12 +219,14 @@ const DubaiCityTour = () => {
 
         <input
           type="date"
+          name="date"
           className="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#F49C0B]"
           required
         />
 
         <input
           type="number"
+          name="persons"
           placeholder="Number of Persons"
           min="1"
           className="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#F49C0B]"
@@ -208,12 +235,14 @@ const DubaiCityTour = () => {
 
         <input
           type="text"
+          name="pickupLocation"
           placeholder="Pickup Location"
           className="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#F49C0B]"
           required
         />
 
         <textarea
+          name="extraRequirements"
           placeholder="Extra Requirements (Optional)"
           rows="3"
           className="w-full border rounded-lg px-4 py-3 outline-none focus:border-[#F49C0B]"
@@ -225,11 +254,11 @@ const DubaiCityTour = () => {
         >
           Submit Booking
         </button>
-
       </form>
     </div>
   </div>
 )}
+
 
     </section>
   );
