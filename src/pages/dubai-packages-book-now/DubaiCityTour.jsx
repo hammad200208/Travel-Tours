@@ -115,7 +115,7 @@ const DubaiCityTour = () => {
 
     {/* WhatsApp Button with Icon */}
     <a
-      href="https://wa.me/971000000000"
+      href="https://wa.me/971565880199"
       target="_blank"
       rel="noopener noreferrer"
       className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-green-600 transition"
