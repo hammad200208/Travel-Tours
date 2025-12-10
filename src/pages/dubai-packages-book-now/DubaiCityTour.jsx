@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaWhatsapp } from "react-icons/fa";
 
 const DubaiCityTour = () => {
   return (
@@ -98,36 +98,52 @@ const DubaiCityTour = () => {
             ></iframe>
           </div>
         </div>
+            {/* RIGHT SIDEBAR */}
+<div className="bg-white shadow-xl rounded-2xl p-6 h-fit sticky top-24">
+  <p className="text-gray-500 text-sm">From</p>
 
-        {/*RIGHT SIDEBAR */}
-        <div className="bg-white shadow-xl rounded-2xl p-6 h-fit sticky top-24">
-          <p className="text-gray-500 text-sm">From</p>
-          <h3 className="text-3xl font-bold text-[#F49C0B] mb-4">
-            AED 499
-          </h3>
+  <h3 className="text-3xl font-bold text-[#F49C0B] mb-4">
+    AED 499
+  </h3>
 
-          <button className="w-full bg-black text-white py-3 rounded-lg mb-6 hover:bg-gray-800 transition">
-            Check Availability
-          </button>
+  {/* Buttons */}
+  <div className="flex flex-col gap-3 mb-6">
+    {/* Book Now Button */}
+    <button className="w-full bg-[#F49C0B] text-white py-3 rounded-lg font-semibold hover:bg-[#d88509] transition">
+      Book Now
+    </button>
 
-          {/*Why Choose Us */}
-          <div>
-            <h4 className="font-semibold mb-4">Why Choose Us?</h4>
-            <ul className="space-y-4 text-sm text-gray-600">
-              {[
-                "Best Price Guarantee",
-                "Secure Online Payments",
-                "24/7 Support",
-                "Trusted by 10,000+ Travelers",
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-600" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+    {/* WhatsApp Button with Icon */}
+    <a
+      href="https://wa.me/971000000000"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-green-600 transition"
+    >
+      <FaWhatsapp className="text-xl" />
+      Book via WhatsApp
+    </a>
+  </div>
+
+  {/* Why Choose Us */}
+  <div>
+    <h4 className="font-semibold mb-4">Why Choose Us?</h4>
+    <ul className="space-y-4 text-sm text-gray-600">
+      {[
+        "Best Price Guarantee",
+        "Secure Online Payments",
+        "24/7 Support",
+        "Trusted by 10,000+ Travelers",
+      ].map((item, i) => (
+        <li key={i} className="flex items-center gap-2">
+          <FaCheckCircle className="text-green-600" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
       </div>
     </section>
   );
